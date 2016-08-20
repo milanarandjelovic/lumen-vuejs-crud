@@ -14,7 +14,12 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+import Todos from './components/todos/todos.vue'
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+
+    components: {
+        'todos': Todos
+    }
 });
