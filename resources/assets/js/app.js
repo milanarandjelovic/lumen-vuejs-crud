@@ -1,4 +1,3 @@
-
 /**
  * First we will load all of this project's JavaScript dependencies which
  * include Vue and Vue Resource. This gives a great starting point for
@@ -14,7 +13,15 @@ require('./bootstrap');
  */
 
 Vue.component('example', require('./components/Example.vue'));
+import Todos from './components/todos/todos.vue';
+import AddTodo from './components/todos/add-todo.vue';
+
 
 const app = new Vue({
-    el: '#app'
+    el: '#app',
+
+    components: {
+        'todos': Todos,
+        'add-todos': AddTodo
+    }
 });
